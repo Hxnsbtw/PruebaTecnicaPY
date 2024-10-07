@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptomonedas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Lista de Criptomonedas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Simbolo</th>
+                <th>Nombre</th>
+                <th>Precio (USD)</th>
+                <th>Cambio 24h (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for coin in coins %}
+            <tr>
+                <td>{{ coin.symbol }}</td>
+                <td><a href="/coin/{{ coin.id }}">{{ coin.name }}</a></td>
+                <td>{{ coin.price_usd }}</td>
+                <td>{{ coin.percent_change_24h }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

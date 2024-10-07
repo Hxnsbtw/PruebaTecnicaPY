@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ coin.name }} - Detalles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Detalles de {{ coin.name }}</h1>
+    <p><strong>Simbolo:</strong> {{ coin.symbol }}</p>
+    <p><strong>Precio actual (USD):</strong> {{ coin.price_usd }}</p>
+    <p><strong>Cambio en las últimas 24h (%):</strong> {{ coin.percent_change_24h }}</p>
+    <p><strong>Market Cap (USD):</strong> {{ coin.market_cap_usd }}</p>
+    <p><strong>Volumen en 24h (USD):</strong> {{ coin.volume24 }}</p>
+    <p><strong>Rango de la moneda:</strong> {{ coin.rank }}</p>
+</body>
+</html>
